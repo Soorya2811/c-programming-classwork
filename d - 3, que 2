@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+union my_union {
+    int integer;
+    float floating_point;
+};
+
+int main() {
+    union my_union u;
+    u.integer = 42;
+    printf("integer field: %d\n", u.integer);
+    u.floating_point = 3.14;
+    printf("floating_point field: %f\n", u.floating_point);
+    return 0;
+}
