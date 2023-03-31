@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define the union
+union my_union {
+  int integer;
+  char string[50];
+};
+
+int main() {
+  union my_union my_union_var; // Declare a variable of type my_union
+
+  printf("Enter a value: ");
+  if (scanf("%d", &my_union_var.integer) == 1) {
+    printf("The value entered is an integer: %d\n", my_union_var.integer);
+  } else {
+    printf("The value entered is a string.\n");
+    printf("Enter a string: ");
+    scanf("%s", my_union_var.string);
+    printf("The string entered is: %s\n", my_union_var.string);
+  }
+
+  return 0;
+}
