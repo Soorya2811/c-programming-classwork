@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+union my_union {
+  int integer;
+  float floating_point;
+};
+
+int main() {
+  union my_union my_value;
+
+  my_value.integer = 42;
+  printf("The integer value is: %d\n", my_value.integer);
+
+  my_value.floating_point = 3.14;
+  printf("The floating point value is: %f\n", my_value.floating_point);
+
+  return 0;
+}
