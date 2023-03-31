@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+union my_union {
+  int integer;
+  float floating_point;
+};
+
+int main() {
+  union my_union arr[5];
+  float total = 0;
+
+  for (int i = 0; i < 5; i++) {
+    printf("Enter an integer or floating-point value for union %d: ", i+1);
+    if (i % 2 == 0) {
+      scanf("%d", &arr[i].integer);
+      total += arr[i].integer;
+    } else {
+      scanf("%f", &arr[i].floating_point);
+      total += arr[i].floating_point;
+    }
+  }
+
+  printf("Total value of all unions: %.2f", total);
+
+  return 0;
+}
